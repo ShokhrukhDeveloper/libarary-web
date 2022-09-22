@@ -8,4 +8,10 @@ class AppTextStyles {
   static const textButton32Style=TextStyle(
     fontSize: 32,color: AppColors.black
   );
+  static TextStyle style18w600white=TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 18,
+      color: AppColors.white,
+      backgroundColor:AppColors.black.withOpacity(0.3)
+  );
 }

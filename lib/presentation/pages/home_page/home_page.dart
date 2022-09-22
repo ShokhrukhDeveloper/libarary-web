@@ -4,6 +4,7 @@ import 'package:referat/presentation/pages/home_page/category_row_widget/categor
 import 'package:referat/presentation/pages/home_page/search_widget/search_widget.dart';
 
 import 'category_result_widget/category_result_widget.dart';
+import 'product_row_widget/product_row_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -26,6 +27,8 @@ class _HomePageState extends State<HomePage> {
             SearchWidget(),
             SizedBox(height: 30,),
             CategoryRowWidget(),
+            SizedBox(height: 30,),
+            ProductRowWidget()
 
 
 
