@@ -28,7 +28,11 @@ class _CategoryRowWidgetState extends State<CategoryRowWidget> {
       children: [
         Align(
             alignment: Alignment.topRight,
-            child: TextButton(onPressed: (){}, child: Text("Barchasi",style: AppTextStyles.textButton32Style,))),
+            child: TextButton(
+                onPressed: (){},
+                child: Text("Barchasi",style: AppTextStyles.textButton32Style,))
+
+        ),
         SizedBox(height: 160,
 
           child: Stack(
