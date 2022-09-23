@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:referat/app_colors/app_text_styles.dart';
 
@@ -16,6 +17,7 @@ class FiltrPage extends StatefulWidget {
 }
 
 class _FiltrPageState extends State<FiltrPage> {
+  var list=true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,50 +25,93 @@ class _FiltrPageState extends State<FiltrPage> {
         builder: (context,constrains) {
           return Column(
             children: [
+              //40
               const AppBarWidget(),
+              //30
               const CategoryResultWidget(),
-              const SizedBox(height: 10,),
+              //5
+              const SizedBox(height: 5,),
+              //40
               const SearchWidget(),
-              const SizedBox(height: 30,),
+              //5
+              const SizedBox(height: 5,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    children: [
-                      FilterWidget(),
-                      SizedBox(height: 30,),
-                      FloatingActionButton.extended(
-                          onPressed: (){},
-                          label: const Text("Tozalash",
-                            style: AppTextStyles.text18W400Black,))
-                    ],
+                  Visibility(
+                    visible: constrains.maxWidth>510,
+                    child: SizedBox(
+                    width: 300,
+                    height: constrains.maxHeight-120,
+                    child:  Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Expanded(child: FilterWidget()),
+                        const SizedBox(height: 15,),
+                        FloatingActionButton.extended(
+                            onPressed: (){},
+                            label: const Text("Tozalash",
+                              style: AppTextStyles.text18W400Black,)),
+                        const SizedBox(height: 50,),
+                      ],
+                    ),
                   ),
-                  Column(
-                    children: [
-                      FilterHeaderWidget(width: MediaQuery.of(context).size.width,),
-                      SizedBox(
-                        width: 1300,
-                        height:690,
-                        child: SingleChildScrollView(
-                          child: GridView.builder(
+                  ),
+
+                  Visibility(
+                    visible: constrains.maxWidth>310,
+                    child: SizedBox(
+                      width: constrains.maxWidth-300,
+                      height: constrains.maxHeight-200,
+                      child: Column(
+                        children: [
+                          FilterHeaderWidget(width: constrains.maxWidth),
+
+                          // Expanded(
+                          //
+                          //   child: ListView.builder(
+                          //
+                          //     itemCount: 4,
+                          //   shrinkWrap: true,
+                          //       itemBuilder: (context, index) {
+                          //
+                          //     return ListTile(
+                          //       leading:ClipRRect(
+                          //         borderRadius: BorderRadius.circular(14),
+                          //         child: CachedNetworkImage(imageUrl: "https://picsum.photos/200/300",
+                          //           fit: BoxFit.cover,
+                          //         ),
+                          //       ),
+                          //     );
+                          //   }),
+                          // )
+
+                          Expanded(
+                            child: GridView.builder(
+                              itemCount: 50,
+                                gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: (constrains.maxWidth-310)~/160,
+                                  crossAxisSpacing: 3,
+                                  mainAxisSpacing: 3,
+                                  childAspectRatio: 1/2,
+
+                                ),
                             shrinkWrap: true,
+                                    // crossAxisSpacing: 3,
+                                    // mainAxisSpacing: 3,
+                                    // childAspectRatio: 1/2,
+                              // crossAxisCount: (constrains.maxWidth-310)~/160,
+                                itemBuilder: (c,i)=>
 
-                              itemCount: 9,
-                              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisSpacing: 10,
-                                  mainAxisSpacing: 10,
-                                  childAspectRatio: 210/380,
-                                  crossAxisCount: 5),
-                              itemBuilder:(context,index){
-                            return ProductItemWidget();
-                              }),
-                        ),
-                      )
+                                  ProductItemWidget(),
+                            ),
+                          )
 
-                    ],
-                  ),
-                ],
+                        ],
+                      ),
+                    ),
+                  )],
               )
             ],
 

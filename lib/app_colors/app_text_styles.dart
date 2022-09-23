@@ -15,17 +15,17 @@ class AppTextStyles {
       backgroundColor:AppColors.black.withOpacity(0.3));
 
   static const textBold20Style=TextStyle(
-      fontSize: 20,
+      fontSize: 14,
       fontWeight: FontWeight.bold,
       color: AppColors.black
   );
   static const text14W400Style=TextStyle(
-      fontSize: 14,
+      fontSize: 10,
       fontWeight: FontWeight.w400,
       color: AppColors.primary
   );
   static const text28W700Style=TextStyle(
-      fontSize: 28,
+      fontSize: 14,
       fontWeight: FontWeight.w700,
       color: AppColors.secondary
   );

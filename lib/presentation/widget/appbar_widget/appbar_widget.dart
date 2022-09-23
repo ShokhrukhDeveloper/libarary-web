@@ -14,14 +14,14 @@ class AppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 20, right: 10),
-      height: 50,
+      height: 40,
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.borderGray, width: 1.0)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           FlutterLogo(
-            size: 30,
+            size: 20,
           ),
           Row(
             mainAxisSize: MainAxisSize.min,

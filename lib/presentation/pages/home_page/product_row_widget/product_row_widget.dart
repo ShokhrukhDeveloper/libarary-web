@@ -28,7 +28,7 @@ class ProductRowWidget extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 455,
+            height: 310,
             child: Stack(
               children: [
                 ListView(

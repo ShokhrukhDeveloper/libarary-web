@@ -8,14 +8,12 @@ class FilterHeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 10,right: 70,top: 25),
-      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.only(left: 10,right: 10,top: 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppColors.borderGray)
-      ),
-      height: 63,
-      width: (width-550)==0?0:(width-550),
+        border: Border.all(color: AppColors.borderGray)),
+      height: 40,
+      width: width<410?width-400:width+5,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,16 +24,14 @@ class FilterHeaderWidget extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(onPressed:(){},icon: Icon(Icons.grid_view_sharp,)),
+              IconButton(onPressed:(){},icon: const Icon(Icons.grid_view_sharp,)),
               IconButton(onPressed:(){},icon: Icon(Icons.table_rows_rounded,color: list?AppColors.primary:null,)),
             ],
           ),
 
 
         ],
-      ),
-
-
+      )
     );
   }
 }

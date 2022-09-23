@@ -14,7 +14,7 @@ class _CategoryResultWidgetState extends State<CategoryResultWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 30,
       width: double.infinity,
       decoration: const BoxDecoration(
         border: Border.symmetric(horizontal: BorderSide(color: AppColors.borderGray))
@@ -27,8 +27,6 @@ class _CategoryResultWidgetState extends State<CategoryResultWidget> {
           CustomTextButton(text: 'Kurs ishlari', onPressed: () {  },),
           CustomTextButton(text: 'Diplom ishlari', onPressed: () {  },),
           CustomTextButton(text: 'Kitoblar', onPressed: () {  },),
-          SizedBox(width: 30,),
-          SizedBox(width: 30,),
         ],
       ),
     );

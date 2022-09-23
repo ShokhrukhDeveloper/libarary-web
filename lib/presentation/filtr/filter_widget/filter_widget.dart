@@ -16,35 +16,31 @@ class _FilterWidgetState extends State<FilterWidget> {
     "Onatiliaad fssdf",
     "Onatiliaad fssdf",
     "Onatiliaad fssdf",
-    "Onatiliaad fssdf",
+    "Onatiliaa afAS",
+    "Onatiliaa afAS",
+    "Onatiliaa afAS",
+    "Onatiliaa afAS",
+    "Onatiliaa afAS",
+    "Onatiliaa afAS",
+    "Onatiliaa afAS",
+    "Onatiliaa afAS",
     "Onatiliaa fAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
-    "Onatiliaa afAS",
+    "Onatiliaa fAS",
+    "Onatiliaa fAS",
+    "Onatiliaa fAS",
     "Onatiliaa fAS",
     "Onatiliaa fASdfasdf asd;fkljasdfbn asdhfasdoghaosidgfiohsadfiohasihodf ",
   ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(left: 75,top: 20,right: 10),
-      width: 300,
-      height: 500,
-      padding: EdgeInsets.only(left: 40,top: 40),
-      decoration: BoxDecoration(
-        border: Border.all(color: AppColors.borderGray),
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: Container(
+        margin: EdgeInsets.only(left: 15,top: 0,right: 10),
+        width: 250,
+        padding: const EdgeInsets.only(left: 10,top: 40),
+        decoration: BoxDecoration(
+          border: Border.all(color: AppColors.borderGray),
+          borderRadius: BorderRadius.circular(14)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -53,9 +49,12 @@ class _FilterWidgetState extends State<FilterWidget> {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Checkbox(value: e.length.isOdd,onChanged: (e){},),
-                 SizedBox(
-                  width: 210,
+                Checkbox(
+                  value: e.length.isOdd,
+                  onChanged: (e){},
+                ),
+                SizedBox(
+                  width: 200,
                   child: Text(e,
                     maxLines: 2,
                     style: const TextStyle(
