@@ -29,4 +29,14 @@ class AppTextStyles {
       fontWeight: FontWeight.w700,
       color: AppColors.secondary
   );
+  static const text18W400Black=TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w400,
+      color: AppColors.black
+  );
+  static const text16W500Black=TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: AppColors.black
+  );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:referat/presentation/filtr/filtr_page.dart';
 
 import 'presentation/pages/home_page/home_page.dart';
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: HomePage(),
+      home: FiltrPage(),
     );
   }
 }
