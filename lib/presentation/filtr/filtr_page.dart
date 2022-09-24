@@ -8,6 +8,7 @@ import '../widget/product_item_widget.dart';
 import '../widget/search_widget/search_widget.dart';
 import 'filter_header_widget/filtr_header_widget.dart';
 import 'filter_widget/filter_widget.dart';
+import 'filtr_list_widget/serach_item_list_widget.dart';
 
 class FiltrPage extends StatefulWidget {
   const FiltrPage({Key? key}) : super(key: key);
@@ -63,55 +64,52 @@ class _FiltrPageState extends State<FiltrPage> {
                     visible: constrains.maxWidth>310,
                     child: SizedBox(
                       width: constrains.maxWidth-300,
-                      height: constrains.maxHeight-200,
+                      height: constrains.maxHeight-121,
                       child: Column(
                         children: [
+                          //40
                           FilterHeaderWidget(width: constrains.maxWidth),
 
-                          // Expanded(
-                          //
-                          //   child: ListView.builder(
-                          //
-                          //     itemCount: 4,
-                          //   shrinkWrap: true,
-                          //       itemBuilder: (context, index) {
-                          //
-                          //     return ListTile(
-                          //       leading:ClipRRect(
-                          //         borderRadius: BorderRadius.circular(14),
-                          //         child: CachedNetworkImage(imageUrl: "https://picsum.photos/200/300",
-                          //           fit: BoxFit.cover,
-                          //         ),
-                          //       ),
-                          //     );
-                          //   }),
-                          // )
+                          SizedBox(
+                            height: constrains.maxHeight-170,
+                            width: constrains.maxWidth-300,
+                            child: ListView.builder(
 
-                          Expanded(
-                            child: GridView.builder(
-                              itemCount: 50,
-                                gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: (constrains.maxWidth-310)~/160,
-                                  crossAxisSpacing: 3,
-                                  mainAxisSpacing: 3,
-                                  childAspectRatio: 1/2,
-
-                                ),
+                              itemCount: 40,
                             shrinkWrap: true,
-                                    // crossAxisSpacing: 3,
-                                    // mainAxisSpacing: 3,
-                                    // childAspectRatio: 1/2,
-                              // crossAxisCount: (constrains.maxWidth-310)~/160,
-                                itemBuilder: (c,i)=>
+                                itemBuilder: (context, index) {
 
-                                  ProductItemWidget(),
-                            ),
+                              return FiltrListItemWidget();
+                            }),
                           )
+
+                          // Expanded(
+                          //   child: GridView.builder(
+                          //     itemCount: 50,
+                          //       gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+                          //           crossAxisCount: (constrains.maxWidth-310)~/160,
+                          //         crossAxisSpacing: 3,
+                          //         mainAxisSpacing: 3,
+                          //         childAspectRatio: 1/2,
+                          //
+                          //       ),
+                          //   shrinkWrap: true,
+                          //           // crossAxisSpacing: 3,
+                          //           // mainAxisSpacing: 3,
+                          //           // childAspectRatio: 1/2,
+                          //     // crossAxisCount: (constrains.maxWidth-310)~/160,
+                          //       itemBuilder: (c,i)=>
+                          //
+                          //         ProductItemWidget(),
+                          //   ),
+                          // )
 
                         ],
                       ),
                     ),
-                  )],
+                  )
+
+                ],
               )
             ],
 

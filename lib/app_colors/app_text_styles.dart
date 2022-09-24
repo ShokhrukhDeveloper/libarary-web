@@ -24,6 +24,16 @@ class AppTextStyles {
       fontWeight: FontWeight.w400,
       color: AppColors.primary
   );
+  static const text14W400StyleBlack=TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      color: AppColors.black
+  );
+  static const text8W400StyleContent=TextStyle(
+      fontSize: 10,
+      fontWeight: FontWeight.w400,
+      color: AppColors.black
+  );
   static const text28W700Style=TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w700,
@@ -38,5 +48,15 @@ class AppTextStyles {
       fontSize: 16,
       fontWeight: FontWeight.w600,
       color: AppColors.black
+  );
+  static const text24W500Black=TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w900,
+      color: AppColors.black
+  );
+  static const text10W400StyleGray=TextStyle(
+      fontSize: 10,
+      fontWeight: FontWeight.w400,
+      color: AppColors.gray
   );
 }
