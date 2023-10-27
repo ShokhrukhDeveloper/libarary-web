@@ -16,17 +16,7 @@ class ProductRowWidget extends StatelessWidget {
       margin:  const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              TextButton(
-                  onPressed: (){},
-                  child: Text("$name",style: AppTextStyles.textButton32Style,)),
-              TextButton(
-                  onPressed: (){},
-                  child: const Text("Barchasi",style: AppTextStyles.textButton32Style,)),
-            ],
-          ),
+
           SizedBox(
             height: 310,
             child: Stack(

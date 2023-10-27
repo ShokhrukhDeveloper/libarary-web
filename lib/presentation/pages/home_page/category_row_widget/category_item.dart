@@ -23,7 +23,7 @@ class CategoryItem extends StatelessWidget {
               )
             ),
           ),
-           Align(
+          Align(
             alignment: Alignment.topCenter,
             child:SizedBox(
                 height: 130,
@@ -35,7 +35,6 @@ class CategoryItem extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: AppTextStyles.style18w600white))),
           ),
-
         ],
       ),
     );

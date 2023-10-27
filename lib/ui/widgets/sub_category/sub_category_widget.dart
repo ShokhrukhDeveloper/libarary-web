@@ -21,7 +21,9 @@ class SubCategory extends StatelessWidget {
                 physics: const AlwaysScrollableScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemCount: 21,
-                itemBuilder: (c, cc) => const SubCategoryItem()),
+                itemBuilder: (c, cc) => InkWell(
+                    onTap: (){},
+                    child: const SubCategoryItem())),
           ),
           Align(
             alignment: Alignment.centerLeft,

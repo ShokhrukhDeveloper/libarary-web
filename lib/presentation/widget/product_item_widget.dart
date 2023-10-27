@@ -46,14 +46,7 @@ class ProductItemWidget extends StatelessWidget {
               ),
             ),
             // const SizedBox(height: 8,),
-             Container(
-              height: 10,
-             width: 140,
-             child: Text(
-               "SIYOSAT, FANTASTIKA ",
-             overflow: TextOverflow.ellipsis,
-             style: AppTextStyles.text14W400Style,),
-             ),
+
             // const SizedBox(height: 8,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
