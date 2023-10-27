@@ -35,9 +35,6 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 30,),
             ProductRowWidget(name: "Kitoblar",),
             const SizedBox(height: 300,),
-
-
-
           ],
         ),
       ),

@@ -13,7 +13,7 @@ class ProductRowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      margin:  EdgeInsets.symmetric(horizontal: 50),
+      margin:  const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         children: [
           Row(
@@ -24,7 +24,7 @@ class ProductRowWidget extends StatelessWidget {
                   child: Text("$name",style: AppTextStyles.textButton32Style,)),
               TextButton(
                   onPressed: (){},
-                  child: Text("Barchasi",style: AppTextStyles.textButton32Style,)),
+                  child: const Text("Barchasi",style: AppTextStyles.textButton32Style,)),
             ],
           ),
           SizedBox(

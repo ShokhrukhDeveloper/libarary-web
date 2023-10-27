@@ -7,19 +7,26 @@ class SearchWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 500,
-      height: 40,
-      child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-          labelText: "Search",
-            prefixIcon: Icon(Icons.keyboard),
-            suffixIcon: Icon(Icons.search),
-
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15)
-          )
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 2),
+      color: Colors.white,
+      height: 90,
+      width: double.infinity,
+      child: Center(
+        child: SizedBox(
+          width: 400,
+          height: 60,
+          child: TextField(
+            controller: controller,
+            decoration: InputDecoration(
+              labelText: "Search",
+                prefixIcon: const Icon(Icons.keyboard),
+                suffixIcon: const Icon(Icons.search),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15)
+              )
+            ),
+          ),
         ),
       ),
     );
