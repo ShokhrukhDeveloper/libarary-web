@@ -31,12 +31,12 @@ class BookItem extends StatelessWidget {
           ),
             const Divider(),
             Expanded(
-              flex: 2,
-              child: const Text("Rich dad poor dad ",
+              flex: 4,
+              child: const Text("Rich dad poor dad asdf",
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 14,
                 fontWeight: FontWeight.bold
               ),
               ),

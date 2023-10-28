@@ -7,9 +7,9 @@ class CategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 5),
       margin: const EdgeInsets.only(top: 2),
-      height: 48,
+    
       color: Colors.white,
       width: double.infinity,
       child: Row(
