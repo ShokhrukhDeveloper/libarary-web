@@ -33,14 +33,16 @@ class _FilterWidgetState extends State<FilterWidget> {
   ];
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        margin: EdgeInsets.only(left: 15,top: 0,right: 10),
-        width: 250,
-        padding: const EdgeInsets.only(left: 10,top: 40),
-        decoration: BoxDecoration(
+    return Container(
+        height: 400,
+      margin: const EdgeInsets.only(left: 15,top: 0,right: 10),
+      width: 250,
+      padding: const EdgeInsets.only(left: 10,top: 40),
+      decoration: BoxDecoration(
+        color: Colors.white,
           border: Border.all(color: AppColors.borderGray),
           borderRadius: BorderRadius.circular(14)),
+      child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
